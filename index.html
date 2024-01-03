@@ -1,13 +1,146 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seu Nome - Portfólio</title>
+        <!-- Link para o arquivo CSS do Tailwind, substitua pela sua configuração específica -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+        <!-- Link para a biblioteca FontAwesome (substitua pela versão mais recente, se necessário) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Se você estiver usando estilos personalizados, adicione seu arquivo CSS aqui -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="font-sans bg-gray-100">
+    
+        <!-- Header com Menu de Navegação e Ícones de Redes Sociais -->
+        <header class="bg-indigo-900 text-white p-8">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo -->
+                <div class="md:flex space-x-4">
+                    <div class="text-center md:text-center mb-4 md:mb-0">
+                        <!-- Substitua "URL_DA_SUA_IMAGEM" pela URL da sua imagem -->
+                        <img src="images/logoo.png" alt="Logo" class="w-32 h-17 object-cover ">
+                    </div>
+                </div>
+    
+                <!-- Menu de Navegação -->
+                <nav class="md:flex space-x-4">
+                    <a href="#introducao" class="hover:text-gray-300">Início</a>
+                    <a href="#sobre" class="hover:text-gray-300">Sobre</a>
+                    <a href="#projetos" class="hover:text-gray-300">Projetos</a>
+                    <a href="#habilidades" class="hover:text-gray-300">Habilidades</a>
+                </nav>
+                <!-- Ícones de Redes Sociais -->
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="https://github.com/liaguiar" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github text-2xl hover:text-gray-300"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/liaguiar" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in text-2xl hover:text-gray-300"></i>
+                    </a>
+                    <!-- Adicione mais ícones de redes sociais conforme necessário -->
+                </div>
+            </div>
+        </header>
+<body class="font-sans bg-gray-100">
+
+      
+           <!-- Seção de Sobre Mim -->
+    <section class="py-12 flex items-center justify-center">
+        <div class="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between">
+            <div class="max-w-2xl mx-auto mt-8">
+                <h2 class="text-lg font-semibold">Sobre Mim</h2>
+                <p class="mt-4">Me chamo Lívia, tenho 21 anos e atualmente estudo Jogos Digitais na PUC Minas, onde me aprofundo em game design, programação, animação, arte e som. Minha paixão é a criação de experiências imersivas para diversos públicos e plataformas.</p>
+            
+                <p class="mt-4">Destaco em meu portfólio projetos como um jogo de plataforma 3D, design de logotipos e um site para um projeto escolar. Além dos estudos, dedico-me aos meus hobbies de desenho, leitura e música.</p>
+            
+                <p class="mt-4">Possuo experiência com Blender, Illustrator e Photoshop, assim como no desenvolvimento de websites e interfaces utilizando CSS, HTML e JavaScript. Aplico criatividade e habilidades técnicas para superar desafios, resultando na entrega de produtos de qualidade.</p>
+            
+                <p class="mt-4">Meu objetivo é integrar habilidades de desenvolvimento web e design de jogos, visando criar soluções interativas e jogos inovadores. Essa fusão, alinhada aos meus interesses pessoais, motiva-me a explorar novas formas de expressão artística e proporcionar experiências envolventes em diversas mídias.</p>
+            </div>
+            <div class="md:w-1/2">
+                <!-- Imagem à Direita, Agora Redonda -->
+                <img src="https://64.media.tumblr.com/34f97ebab210c3f906a76603ca1aac5d/5552ccf6ac84e9de-33/s500x750/7de509a216f68855bfc66f53e4b2d5bcda5ab501.gif" alt="Sua Imagem" class="w-3/4 h-auto rounded-full">
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Seção de Projetos -->
+    
+        <!-- Seção de Navegação de Projetos -->
+        <section class="py-8 bg-gray-300">
+            <div class="container mx-auto flex justify-center space-x-4">
+                <a href="#" data-filter="tudo" class="nav-2">Tudo</a>
+                <a href="#" data-filter="casamento" class="nav-2">Casamento</a>
+                <a href="#" data-filter="produtos" class="nav-2">Produtos</a>
+                <a href="#" data-filter="comida" class="nav-2">Comida</a>
+                <a href="#" data-filter="moda" class="nav-2">Moda</a>
+            </div>
+        </section>
+    
+  <!-- Seção de Projetos com Efeito Hover -->
+  <section class="container mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
+    <div class="text-center">
+        <h2 class="font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800 md:w-full w-9/12 mx-auto">
+            Projetos</h2>
+    </div>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Projeto 1 -->
+        <div class="group relative li-produtos" data-tags="paisagem">
+            <img src="https://i.pinimg.com/564x/30/da/d2/30dad2f5d5923e7a7715fe25ea590d35.jpg" alt="Descrição do Projeto 1" class="w-full rounded shadow-xl hover:shadow-2xl transition-transform duration-300 transform hover:scale-105">
+            <div class="overlay absolute top-0 left-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-50 bg-black transition-opacity duration-300">
+                <div class="text-center text-white">
+                    <h1 class="font-bold text-lg">Título do Projeto 1</h1>
+                    <p class="font-medium text-sm">Descrição curta do Projeto 1</p>
+                    <small class="text-xs font-light">Photo by Autor do Projeto 1</small>
+                </div>
+            </div>
+        </div>
+        <!-- Projeto 2 -->
+        <div class="group relative li-produtos" data-tags="casamento">
+            <img src="https://i.pinimg.com/564x/30/da/d2/30dad2f5d5923e7a7715fe25ea590d35.jpg" alt="Descrição do Projeto 2" class="w-full rounded shadow-xl hover:shadow-2xl transition-transform duration-300 transform hover:scale-105">
+            <div class="overlay absolute top-0 left-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-50 bg-black transition-opacity duration-300">
+                <div class="text-center text-white">
+                    <h1 class="font-bold text-lg">Título do Projeto 2</h1>
+                    <p class="font-medium text-sm">Descrição curta do Projeto 2</p>
+                    <small class="text-xs font-light">Photo by Autor do Projeto 2</small>
+                </div>
+            </div>
+        </div>
+        <!-- Adicione mais projetos conforme necessário -->
+    </div>
+</section>
+
+        <script>
+            const navLinks = document.querySelectorAll('.nav-2');
+            const produtos = document.querySelectorAll('.li-produtos');
+    
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+    
+                    const filter = this.getAttribute('data-filter');
+    
+                    produtos.forEach(produto => {
+                        const tags = produto.getAttribute('data-tags');
+    
+                        if (filter === 'tudo' || tags.includes(filter)) {
+                            produto.style.display = 'block';
+                        } else {
+                            produto.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        </script>
+
+    <!-- Rodapé -->
+    <footer class="bg-indigo-900 text-white text-center py-4">
+        <p>&copy; 2024 Liaguiar. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
