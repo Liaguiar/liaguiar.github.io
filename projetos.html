@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seu Nome - Portfólio</title>
+        <!-- Link para o arquivo CSS do Tailwind, substitua pela sua configuração específica -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+        <!-- Link para a biblioteca FontAwesome (substitua pela versão mais recente, se necessário) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Se você estiver usando estilos personalizados, adicione seu arquivo CSS aqui -->
+        <link rel="stylesheet" href="/style.css">
+    </head>
+<body  class="overflow-hidden">
+    
+  <!-- Seção de Projetos -->
+    
+        <!-- Seção de Navegação de Projetos -->
+
+        <section class="py-8 bg-gray-300">
+            
+            <div class="container mx-auto flex justify-center space-x-4">
+                <a href="#" data-filter="tudo" class="nav-2">Tudo</a>
+                <a href="#" data-filter="casamento" class="nav-2">Casamento</a>
+                <a href="#" data-filter="produtos" class="nav-2">Produtos</a>
+                <a href="#" data-filter="comida" class="nav-2">Comida</a>
+                <a href="#" data-filter="moda" class="nav-2">Moda</a>
+            </div>
+        </section>
+    
+  <!-- Seção de Projetos com Efeito Hover -->
+  <section class="container mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Projeto 1 -->
+        <div class="group relative li-produtos" data-tags="paisagem">
+            <img src="https://i.pinimg.com/564x/30/da/d2/30dad2f5d5923e7a7715fe25ea590d35.jpg" alt="Descrição do Projeto 1" class="w-full rounded shadow-xl hover:shadow-2xl transition-transform duration-300 transform hover:scale-105">
+            <div class="overlay absolute top-0 left-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-50 bg-black transition-opacity duration-300">
+                <div class="text-center text-white">
+                    <h1 class="font-bold text-lg">Título do Projeto 1</h1>
+                    <p class="font-medium text-sm">Descrição curta do Projeto 1</p>
+                    <small class="text-xs font-light">Photo by Autor do Projeto 1</small>
+                </div>
+            </div>
+        </div>
+        <!-- Projeto 2 -->
+        <div class="group relative li-produtos" data-tags="casamento">
+            <img src="https://i.pinimg.com/564x/30/da/d2/30dad2f5d5923e7a7715fe25ea590d35.jpg" alt="Descrição do Projeto 2" class="w-full rounded shadow-xl hover:shadow-2xl transition-transform duration-300 transform hover:scale-105">
+            <div class="overlay absolute top-0 left-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-50 bg-black transition-opacity duration-300">
+                <div class="text-center text-white">
+                    <h1 class="font-bold text-lg">Título do Projeto 2</h1>
+                    <p class="font-medium text-sm">Descrição curta do Projeto 2</p>
+                    <small class="text-xs font-light">Photo by Autor do Projeto 2</small>
+                </div>
+            </div>
+        </div>
+        <!-- Adicione mais projetos conforme necessário -->
+    </div>
+</section>
+
+        <script>
+            const navLinks = document.querySelectorAll('.nav-2');
+            const produtos = document.querySelectorAll('.li-produtos');
+    
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+    
+                    const filter = this.getAttribute('data-filter');
+    
+                    produtos.forEach(produto => {
+                        const tags = produto.getAttribute('data-tags');
+    
+                        if (filter === 'tudo' || tags.includes(filter)) {
+                            produto.style.display = 'block';
+                        } else {
+                            produto.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        </script>
+
+</body>
+</html>
