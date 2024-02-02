@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [],
   theme: {
-    extend: {},
+    colors: {
+      amber: colors.amber,
+      emerald: colors.emerald,
+      teal: '#007A7D',
+    }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    // ...
+  ],
 }
+
