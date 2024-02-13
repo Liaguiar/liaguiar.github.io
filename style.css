@@ -1,0 +1,38 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7fafc;
+  line-height: 16px;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color:#05b2b5;
+  color: #fff;
+  font-weight: bold;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e4e4e4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #03aeb0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #029396;
+}
+
+/* Projetos */
+
