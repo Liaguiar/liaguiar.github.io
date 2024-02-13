@@ -69,7 +69,7 @@ margin-bottom: 0.5vh;
     height: 37vh;
     flex-shrink: 0;
     position: relative;
-    overflow: hidden; /* Adicionado overflow para esconder parte da imagem durante o zoom */
+    overflow: hidden; 
 }
 
 .img-produtos {
@@ -106,7 +106,7 @@ margin-bottom: 0.5vh;
 }
 
 .li-produtos:hover .img-produtos {
-    transform: scale(1.1); /* Ajuste o valor conforme necessário para o nível de zoom desejado */
+    transform: scale(1.1); /* zoom*/
 }
 
 

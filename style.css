@@ -34,5 +34,14 @@ body {
   background: #029396;
 }
 
-/* Projetos */
 
+footer {
+  background-color: #029396; 
+  color: #fff; 
+  text-align: center; 
+  font-weight: 500;
+  height: 4vh;
+}
+footer p {
+  font-size: 2vh!important;
+}

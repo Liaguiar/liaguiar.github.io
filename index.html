@@ -368,10 +368,10 @@
  
  <section id="Contato">
   
-  <section class="form-contato">
+  <<section class="form-contato">
     <h2>Contato</h2>
     <h4>Me escreva um e-mail. Estou à disposição!</h4>
-    <form action="#">
+    <form id="myForm" action="https://formspree.io/f/xayroevj" method="POST">
       <div>
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Digite seu email">
@@ -385,20 +385,38 @@
         <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
       </div>
       <div>
-        <button type="submit">ENVIAR</button>
+        <button type="button" onclick="enviarFormulario()">ENVIAR</button>
       </div>
       <div class="social-icons">
-        <div class="icon-circle"><i class="fab fa-linkedin-in"></i></div>
-        <div class="icon-circle"><i class="fab fa-artstation"></i></div>
-        <div class="icon-circle"><i class="fab fa-github"></i></div>
-        <div class="icon-circle"><i class="fab fa-instagram"></i></div>
-        <div class="icon-circle"><i class="fab fa-whatsapp"></i></div>
+        <div class="icon-circle"><a href="https://www.linkedin.com/in/liaguiar/"><i class="fab fa-linkedin-in"></i></a></div>
+        <div class="icon-circle"><a href="URL_DO_LINK"><i class="fab fa-artstation"></i></a></div>
+        <div class="icon-circle"><a href="https://github.com/Liaguiar"><i class="fab fa-github"></i></a></div>
+        <div class="icon-circle"><a href=""><i class="fab fa-instagram"></i></a></div>
+        <div class="icon-circle"><a href=""><i class="fab fa-whatsapp"></i></a></div>
       </div>
     </form>
   </section>
+  <script>
+    function enviarFormulario() {
+      var form = document.getElementById('myForm');
+      var formData = new FormData(form);
+      var xhr = new XMLHttpRequest();
+  
+      xhr.open('POST', 'https://formspree.io/f/xayroevj', true);
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          alert("Mensagem enviada com sucesso!");
+          form.reset();
+        } else {
+          alert("Erro ao enviar mensagem. Tente novamente mais tarde.");
+        }
+      };
+  
+      xhr.send(formData);
+    }
+  </script>
+  
 </section>
 
- 
-   
   
 </body></html>
