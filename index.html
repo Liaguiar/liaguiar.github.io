@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="​IT Solution Strategy Development For Your Bussiness, ​We&amp;apos;re ready to share our advice and experience, ​We’re one of the largest and most established builders, ​About, ​Broad Knowledge Base. Deep Insights., ​We are the best agency to improve your deals, ​We&amp;apos;re here to support">
     <meta name="description" content="">
-    <title>Inicio</title>
+    <title>Liaguiar - Portifolio</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Inicio.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
@@ -95,7 +95,13 @@
                 <div class="u-container-style u-layout-cell u-size-34 u-layout-cell-2">
                   <div class="u-container-layout u-valign-top-sm u-valign-top-xs u-container-layout-2">
                     <h1 class="u-align-center u-text u-text-1">Sobre mim</h1>
-                    <p class="u-align-justify u-text u-text-2"> Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read.​Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read.​Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read.can manor smart money hopes worth too. Comfort producecan manor smart&nbsp;<br>
+                      <p class="u-align-justify u-text u-text-2">Me chamo Lívia, tenho 21 anos e atualmente estudo Jogos Digitais na PUC Minas, onde me aprofundo em game design, programação, animação, arte e som. Minha paixão é a criação de experiências imersivas para diversos públicos e plataformas.</p>
+
+                      <p class="u-align-justify u-text u-text-2">Possuo experiência com Blender, Unity, Illustrator e Photoshop, assim como no desenvolvimento de websites e interfaces. Aplico criatividade e habilidades técnicas para superar desafios.</p>
+      
+                      <p class="u-align-justify u-text u-text-2">Meu objetivo é integrar habilidades, visando criar soluções interativas e jogos inovadores. Essa fusão, alinhada aos meus interesses pessoais, motiva-me a explorar novas formas de expressão artística e proporcionar experiências envolventes em diversas mídias.</p>
+
+
                     </p>
                     <a href="Curriculo.html" class="u-active-custom-color-3 u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-border-none u-btn u-btn-round u-button-style u-custom-color-4 u-hover-custom-color-5 u-radius-50 u-btn-1" >Ver Curriculo</a>
                   </div>
@@ -108,7 +114,7 @@
       
 
   </section>
-  <!-- Seção de Projetos com Efeito Hover -->
+  <!-- Seção de Projetos -->
  
   <section id="Projetos">
     <h1 >Projetos</h1>
@@ -312,18 +318,26 @@
   </section>
 </div>
 <div id="arrow-container">
-  <button id="arrow-left" onclick="scrollSection(-100, 0)">&#60----</button>
+  <button id="arrow-left" onclick="scrollSection(-10, 0)">&#60----</button>
   <button id="arrow-right" onclick="scrollSection(100, 0)">----&#62</button>
-</div>
-
+</div><!-- Restante do HTML permanece inalterado -->
 <script>
   var scrollingInterval;
+  var section = document.querySelector('.product-all-contents');
+  var scrollAmount = 5; // Valor do deslocamento em pixels
 
   function startScrolling(x, y) {
-    var section = document.querySelector('.product-all-contents');
     scrollingInterval = setInterval(function () {
-      section.scrollBy(x, y);
-    }, 10); // Ajuste o valor do intervalo para controlar a velocidade
+      section.scrollLeft += x;
+
+      // Se atingir o início, mova para o final suavemente
+      if (section.scrollLeft <= 0) {
+        section.scrollLeft = section.scrollWidth;
+      } else if (section.scrollLeft + section.clientWidth >= section.scrollWidth) {
+        // Se atingir o final, mova para o início suavemente
+        section.scrollLeft = 0;
+      }
+    }, 5); // Ajuste o valor do intervalo para controlar a velocidade
   }
 
   function stopScrolling() {
@@ -331,15 +345,14 @@
   }
 
   // Adicione os eventos de pressionar e soltar nos botões
-  document.getElementById('arrow-left').addEventListener('mousedown', function() {
-    startScrolling(-10, 0); // Ajuste os valores de acordo com sua preferência
+  document.getElementById('arrow-left').addEventListener('mousedown', function () {
+    startScrolling(-scrollAmount, 0);
   });
-  document.getElementById('arrow-right').addEventListener('mousedown', function() {
-    startScrolling(10, 0); // Ajuste os valores de acordo com sua preferência
+  document.getElementById('arrow-right').addEventListener('mousedown', function () {
+    startScrolling(scrollAmount, 0); // Alterado para 0 para permitir a rolagem do final para o início
   });
   document.addEventListener('mouseup', stopScrolling);
 </script>
-
 
   <script>
   
